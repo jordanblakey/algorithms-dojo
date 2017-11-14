@@ -11,3 +11,7 @@ def song_decoder(song):
         song = song[:-1]
     print(song)
     return song
+
+# More succinctly:
+def song_decoder(song):
+    return " ".join(song.replace('WUB', ' ').split())
