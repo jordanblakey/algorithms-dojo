@@ -3,7 +3,8 @@ def solution(string, markers):
     acc = []
     string = string.split('\n')
     for line in string:
-        for marker in markers: if marker in line:
+        for marker in markers:
+            if marker in line:
                 line = line[:line.index(marker)]
         acc.append(line.strip(' '))
     acc = '\n'.join(acc)
