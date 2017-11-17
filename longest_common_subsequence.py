@@ -16,7 +16,7 @@ def lcs(x, y):
         
     
     def consubseq():
-        # Returns consecutive subseqences
+        # Returns longest consecutive subseqence
         for seq in subseqs(x):
             if seq in subseqs(y):
                 return seq
@@ -24,7 +24,7 @@ def lcs(x, y):
 
     
     def subseq(a,b):
-        # Returns fuzzy subsequences
+        # Returns longest fuzzy subsequence
         common = []
         for seq in subseqs(a):
             i = 0
