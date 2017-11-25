@@ -25,3 +25,13 @@ public class Counter {
     return count;
   }
 }
+
+
+// More succinctly:
+public class C {
+  public int cs(Boolean[] arr) {
+    int c = 0;
+    for (Boolean b : arr) if (b) c++;
+    return c;
+  }
+}
