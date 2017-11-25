@@ -4,5 +4,4 @@ numberToString = (num) i->
   return num.toString()
 
 # More succinctly:
-num2str = (num) ->
-  "#{num}"
+num2str = (num) -> "#{num}"
