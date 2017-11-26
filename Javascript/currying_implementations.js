@@ -22,6 +22,6 @@ let dragon2 = (name, size, element) =>
 
 dragon2 = _.curry(dragon2)
 
-let bobDragon = dragon2('Bob')
+let bobDragon = dragon2('Ezra')
 let tinyDragon2 = bobDragon('tiny')
 console.log('[LODASH]:', tinyDragon2('peas'))
