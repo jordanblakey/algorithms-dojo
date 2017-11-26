@@ -4,3 +4,6 @@ function sumStr(a,b) {
   let nan = x => !isNaN(x) ? x : null;
   return (nan(ai) + nan(bi)).toString()
 }
+
+// More succinctly:
+let sumStr = (a,b) => (+a + +b)+''
