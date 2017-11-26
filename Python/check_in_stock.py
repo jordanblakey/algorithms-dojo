@@ -17,5 +17,4 @@ def fillable2(stock, merch, n):
     return False
     
 # More succinctly:
-def fillable3(stock, merch, n):
-  return stock.get(merch, 0) >= n
+def fillable3(stock, merch, n): return stock.get(merch, 0) >= n
