@@ -12,3 +12,10 @@ function reverseLongWords(words){
   })
   return words.join(' ')
 }
+
+// More succinctly, using map
+function rlg(ws){
+  return ws.split(' ').map((w) => {
+    return (w.length > 4) ? w.split('').reverse().join('') : w;
+  }).join(' ');
+}
