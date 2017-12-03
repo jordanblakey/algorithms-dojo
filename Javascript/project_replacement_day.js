@@ -20,8 +20,10 @@ function evaporator(content, evap_per_day, threshold){
     day += 1
     console.log('day', day, '| ml:', content-min)
   }
+
   console.log('\n== Replacement Needed ==============\n== Current Day: '+day+' =================')
   return day
+
 }
 
 
