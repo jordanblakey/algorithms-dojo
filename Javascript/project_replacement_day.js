@@ -3,9 +3,8 @@ function evaporator(content, evap_per_day, threshold){
   // Given content(ml), evap per day(% of content), and replacement 
   //threshold(% of initial content), return the projected replacement day.
 
-  let ev = evap_per_day / 100
-  let evap_coefficient = 1 - ev
-  let min = content - ((100 - threshold) / 100 * content)
+  let evap_coefficient = 1 - evap_per_day / 100
+  let min = content - (((100 - threshold) / 100) * content)
   let day = 0
 
   console.log('\n== Initial Conditions ==============\n')  
