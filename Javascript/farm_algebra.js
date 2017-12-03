@@ -15,11 +15,11 @@ function animals(heads, legs){
   
   // Checking edge cases
   if (cows < 0 ||
-  chickens < 0 ||
-  !Number.isInteger(cows) ||
-  !Number.isInteger(chickens) ||
-  heads < 0 ||
-  legs < 0 )
+    chickens < 0 ||
+    !Number.isInteger(cows) ||
+    !Number.isInteger(chickens) ||
+    heads < 0 ||
+    legs < 0 )
   
   // Return the result
   return 'No solutions'
