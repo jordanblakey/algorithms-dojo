@@ -8,3 +8,10 @@ function range(a,r,n) {
   }
   return arr
 } 
+
+// Better:
+let range = (a,r,n) => { 
+  arr = [a]
+  while (--n) arr.push(a+=r)
+  return arr.join(', ')
+}
