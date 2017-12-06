@@ -5,3 +5,7 @@ function getAgeFromString(inputString){
     .map(x => parseInt(x))
     .filter(Number)[0]
 }
+
+
+// Batteries included:
+let getInt = (is) => parseInt(is)
