@@ -2,7 +2,8 @@ import csv
 
 # with open('names.csv', 'r') as csv_file:  # Open context (read)
 
-#   csv_reader = csv.reader(csv_file)  # load the csv file into csv.reader module
+# # load the csv file into csv.reader module
+#   csv_reader = csv.reader(csv_file)
 #   # print(dir(csv_reader)) # Print all methods
 #   print(csv_reader)  # csv reader object (generator)
 #   print('Line number: ' + str(csv_reader.line_num))  # 0
