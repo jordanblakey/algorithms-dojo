@@ -58,6 +58,8 @@ print(comp_set)
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
+# Generators
+
 def gen_func(nums):
     for n in nums:
         yield n + n
@@ -72,3 +74,15 @@ for x in gen:
 gen = (x * x for x in nums)
 for x in gen:
     print(x)
+
+
+def my_range(start, end):
+    current = start
+    while current <= end:
+        yield current
+        current += 1
+
+
+nums = my_range(10, 20)
+for num in nums:
+    print(num)
