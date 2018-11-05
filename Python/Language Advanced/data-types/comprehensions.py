@@ -27,3 +27,48 @@ print(tuple_list)
 
 tuple_list = [(letter, num) for letter in 'abcd' for num in range(4)]
 print(tuple_list)
+
+# Dictionary from 2 lists
+names = ['Bruce', 'Clark', 'Peter', 'Logan', 'Wade']
+heros = ['Batman', 'Superman', 'Spiderman', 'Wolverine', 'Deadpool']
+zip_dict = {}
+for name, hero in zip(names, heros):
+    zip_dict[name] = hero
+print(zip_dict)
+
+# Using a dictionary comprehension
+comp_dict = {name: hero for name, hero in zip(names, heros)}
+print(comp_dict)
+
+comp_dict = {name: hero for name, hero in zip(names, heros) if name != 'Peter'}
+print(comp_dict)
+
+# Set Comprehensions
+nums = [11, 2, 1, 3, 4, 3, 4, 5, 5, 6, 7, 8, 7, 9, 9]
+loop_set = set()
+for n in nums:
+    loop_set.add(n)
+print(loop_set)
+
+comp_set = {n for n in nums}
+print(comp_set)
+
+
+# Generator Comprehensions
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+def gen_func(nums):
+    for n in nums:
+        yield n + n
+
+
+gen = gen_func(nums)
+print(gen)
+
+for x in gen:
+    print(x)
+
+gen = (x * x for x in nums)
+for x in gen:
+    print(x)
