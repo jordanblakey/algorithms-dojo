@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="painting" width="1000" height="740"></canvas>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script type="text/javascript">
+        var canvas = document.getElementById('painting')
+        var context = canvas.getContext('2d')
+        var particles = d3.range(10000).map(function(d) {
+            return {
+                speed: 1 + Math.random(),
+                angle: 2 * Math.PI * Math.random(),
+                x: canvas.width * Math.random(),
+                y: canvas.height * Math.random()
+            }
+        })
+
+        function drawDot(d) {
+            context.fillRect(d.x, d.y, 2, 2)
+        }
+
+        d3.timer(function(t) {
+            context.fillStyle = 'rgba(0,0,0,.08)'
+            context.fillRect(0, 0, canvas.width, canvas.height)
+
+            particles.forEach(function(d) {
+                d.x = d.x + Math.cos(d.angle) * d.speed
+                d.y = d.y + Math.sin(d.angle) * d.speed
+            })
+
+            context.fillStyle = "#f5b"
+            particles.forEach(drawDot)
+        })
+    </script>
+</body>
+</html>
