@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="canvas" width="100" height="190"></canvas>
+    <canvas id="canvas" width="100" height="170"></canvas>
     <script type="text/javascript">
         var canvas = document.getElementById('canvas')
         var context = canvas.getContext('2d')
@@ -18,7 +18,7 @@
 
         function drawBar(d, i) {
             var x = 10*i
-            var y = 190
+            var y = 170
             var width = 8
             var height = -5*d
             context.fillRect(x, y, width, height)
