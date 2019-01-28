@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="100" height="190"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById('canvas')
+        var context = canvas.getContext('2d')
+        var data  = [1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+        context.fillStyle = '#f5b'
+        data.forEach(drawBar)
+
+        function drawBar(d, i) {
+            var x = 10*i
+            var y = 190
+            var width = 8
+            var height = -5*d
+            context.fillRect(x, y, width, height)
+        }
+    </script>
+</body>
+</html>
