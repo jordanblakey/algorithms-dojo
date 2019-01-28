@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Canvas 1</h2>
+    <canvas id="canvas1" width="960" height="500"></canvas>
+    <h2>Canvas 2</h2>
+    <canvas id="canvas2" width="960" height="500"></canvas>
+    <h2>Canvas 3</h2>
+    <canvas id="canvas3" width="960" height="500"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById('canvas1')
+        var context = canvas.getContext('2d')
+
+        // draw on pixels here
+        context.fillStyle = "mediumseagreen"
+        context.fillRect(500, 20, 200, 600)
+
+        context.fillStyle = "darkorchid"
+        context.fillRect(200, 200, 600, 60)
+
+        context.fillStyle = "deepskyblue"
+        context.fillRect(400, 180, 60, 300)
+    </script>
+
+    <script type="text/javascript">
+        canvas = document.getElementById('canvas2')
+        context = canvas.getContext('2d')
+
+        context.strokeSyle = "#f5b"
+        context.fillStyle = "mediumseagreen"
+        context.lineWidth = 3
+
+        context.beginPath()
+        context.moveTo(150, 250)
+        context.lineTo(200, 100)
+        context.lineTo(250, 175)
+        context.lineTo(300, 100)
+        context.lineTo(350, 250)
+        context.closePath()
+        context.stroke()
+        context.fill()
+
+    </script>
+
+    <script type="text/javascript">
+        canvas = document.getElementById('canvas3')
+        context = canvas.getContext('2d')
+
+        context.fillStyle = "crimson"
+        context.beginPath()
+        context.arc(800, 250, 450, 0, 2*Math.PI)
+        context.fill()
+
+        context.fillStyle = "steelblue"
+        context.lineWidth = 10
+        context.beginPath()
+        context.arc(50, 250, 50, 0, 1*Math.PI)
+        context.stroke()
+        context.arc(50, 250, 50, 0, 2*Math.PI)
+        context.fill()
+
+        function circle(x, y, radius, color) {
+            context.fillStyle = color
+            context.beginPath()
+            context.arc(x, y, radius, 0, 2*Math.PI)
+            context.fill()
+        }
+
+        circle(600, 250, 100, "#ccc")
+        circle(800, 250, 200, "steelblue")
+    </script>
+</body>
+</html>
+
