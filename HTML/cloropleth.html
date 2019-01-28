@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="960" height="500"></canvas>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript">
+        var canvas = document.getElementById('canvas')
+        var context = canvas.getContext('2d')
+
+        var projection = d3.geo.albersUsa()
+
+        var path = d3.geo.path()
+            .projection(projection)
+            .context(context)
+
+        var color = d3.scale.threshold()
+            .range(["#fde0dd", "#fcc5c0", "#fa9fb5", "#f768a1", "#dd3497", "#ae017e", "#7a0177", "#49006a"])
+            .domain([250, 500, 750, 1000, 1250, 1500, 1750, 2000])
+
+        d3.json("./geoJson-us-counties.json", function(json) {
+            for (var i=0; i < data,length; i++) {
+
+            }
+        })
+
+        context.strokeStyle = "#fff"
+        context.lineWidth = 0.3
+
+        countGeojson.forEach(function(d) {
+            context.fillStyle = color(d["Crude Rate"])
+            context.beginPath()
+            path(d)
+            context.fill()
+            context.stroke()
+        })
+
+    </script>
+</body>
+</html>
